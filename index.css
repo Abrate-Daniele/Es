@@ -1,0 +1,49 @@
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+#cubo{
+    width: 100px;
+    height: 100px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    perspective-origin: bottom;
+    position: relative;
+}
+.faccia{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 14pt;
+    position: absolute;
+    border: solid 1px black;
+}
+.anteriore{
+    background-color: rgba(125,0,0,0.75);
+    transform: translateZ(50px);
+}
+.destra{
+    background-color: rgba(200,0,0,0.75);
+    transform: rotateY(90deg) translateZ(50px);
+}
+.sinistra{
+    background-color: rgba(200,0,0,0.75);
+    transform: rotateY(-90deg) translateZ(50px);
+}
+.posteriore{
+    background-color: rgba(200,0,0,0.75);
+    transform: translateZ(-50px);
+}
+.superiore{
+    background-color: rgba(200,0,0,0.75);
+    transform: rotateX(90deg) translateZ(50px);
+}
+.inferiore{
+    background-color: rgba(200,0,0,0.75);
+    transform: rotateX(90deg) translateZ(-50px);
+}
