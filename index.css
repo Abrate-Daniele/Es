@@ -11,8 +11,51 @@ body{
     height: 100px;
     perspective: 500px;
     transform-style: preserve-3d;
-    perspective-origin: bottom;
+    perspective-origin: top;
     position: relative;
+    animation-name: cubo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+/*@keyframes cubo {
+    0%{
+        margin-top: -300px;
+        margin-left: -50px;
+    }
+    75%{
+        margin-top: 500px;
+        margin-left: -50px;
+    }
+    81%{
+        margin-top: 400px;
+        margin-left: 175px;
+    }
+    87%{
+        margin-top: 300px;
+        margin-left: 450px;
+    }
+    93%{
+        margin-top: 400px;
+        margin-left: 725px;
+    }
+    100%{
+        margin-top: 500px;
+        margin-left: 1000px;
+    }
+}*/
+@keyframes cubo{
+    0%{
+        transform: translate(-100px, -300px);
+    }
+    75%{
+        transform: translate(-100px, 250px);
+    }
+    88%{
+        transform: translate(325px, 100px);
+    }
+    100%{
+        transform: translate(550px, 250px);
+    }
 }
 .faccia{
     width: 100px;
@@ -26,6 +69,9 @@ body{
 .anteriore{
     background-color: rgba(125,0,0,0.75);
     transform: translateZ(50px);
+}
+#cubo:has(.anteriore:hover){
+    transform: rotate3d(0,1,0,45deg);
 }
 .destra{
     background-color: rgba(200,0,0,0.75);
